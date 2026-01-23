@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 
 const allProjects = await getCollection('projects');
 const sortedProjects = allProjects.sort((a, b) => (a.data.featured === b.data.featured ? 0 : a.data.featured ? -1 : 1));
@@ -13,7 +14,7 @@ const sortedProjects = allProjects.sort((a, b) => (a.data.featured === b.data.fe
         <div class="bg-slate-900 rounded-xl overflow-hidden border border-slate-800 hover:border-teal-500/50 transition-all hover:shadow-xl hover:-translate-y-1 group flex flex-col h-full">
           <div class="h-48 bg-slate-800 relative overflow-hidden group-hover:opacity-90 transition-opacity">
             {project.data.featuredImage ? (
-                <img src={project.data.featuredImage} alt={project.data.title} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <Image src={project.data.featuredImage} alt={project.data.title} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
             ) : (
                 <div class="w-full h-full bg-slate-800 flex items-center justify-center text-slate-600 bg-gradient-to-br from-slate-800 to-slate-900">
                    <span class="text-4xl font-mono opacity-20">&lt;/&gt;</span>

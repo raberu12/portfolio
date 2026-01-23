@@ -1,10 +1,10 @@
 ---
-title: "Personal Portfolio"
-summary: "A one-page parallax portfolio built with Astro and Tailwind CSS. Features smooth scrolling, responsive design, and accessible components."
-tech: ["Astro", "Tailwind CSS", "TypeScript"]
-featuredImage: "/images/portfolio-cover.svg"
-github: "https://github.com/yourname/portfolio"
-liveUrl: "https://yourname.dev"
+title: 'Personal Portfolio'
+summary: 'A one-page parallax portfolio built with Astro and Tailwind CSS. Features smooth scrolling, responsive design, and accessible components.'
+tech: ['Astro', 'Tailwind CSS', 'TypeScript']
+featuredImage: '../../assets/images/portfolio-cover.svg'
+github: 'https://github.com/yourname/portfolio'
+liveUrl: 'https://yourname.dev'
 featured: true
 ---
 
