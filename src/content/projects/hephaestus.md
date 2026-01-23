@@ -2,7 +2,7 @@
 title: 'Hephaestus'
 summary: 'An AI-powered PC Part Picker that helps users build their dream computers. Built with Next.js and Tailwind, it uses free NVIDIA models via OpenRouter to provide component recommendations and compatibility checks.'
 tech: ['Next.js', 'Tailwind CSS', 'OpenRouter API', 'NVIDIA AI']
-featuredImage: ''
+featuredImage: '/images/hephaestus-preview.png'
 liveUrl: 'https://hephaestus-chi.vercel.app/'
 featured: true
 ---
