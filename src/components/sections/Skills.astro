@@ -1,0 +1,29 @@
+---
+const skills = [
+  { category: "Frontend", items: ["Astro", "React", "TypeScript", "Tailwind CSS", "Next.js"] },
+  { category: "Backend", items: ["Node.js", "Express", "PostgreSQL", "Supabase", "Serverless"] },
+  { category: "Tools", items: ["Git", "Docker", "VS Code", "Figma", "Linux"] },
+];
+---
+<section id="skills" class="fade-in-section py-20 md:py-32 bg-slate-900 relative">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-white">Technical Skills</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {skills.map((skillGroup) => (
+        <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50 hover:border-teal-500/50 transition-all hover:bg-slate-800 hover:shadow-lg hover:shadow-teal-500/5 group">
+          <h3 class="text-xl font-bold text-teal-400 mb-6 group-hover:text-teal-300 transition-colors">{skillGroup.category}</h3>
+          <ul class="space-y-3">
+            {skillGroup.items.map((skill) => (
+              <li class="flex items-center text-slate-300">
+                <svg class="w-5 h-5 text-teal-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                {skill}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
