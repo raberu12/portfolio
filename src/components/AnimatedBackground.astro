@@ -1,4 +1,4 @@
-<div class="blob-cont fixed inset-0 z-0 overflow-hidden pointer-events-none select-none">
+<div class="blob-cont fixed inset-0 z-0 overflow-hidden pointer-events-none select-none" aria-hidden="true">
   <div class="blob blob-one"></div>
   <div class="blob blob-two"></div>
   <div class="blob blob-three"></div>
@@ -11,14 +11,13 @@
 <style>
   .blob-cont {
     filter: blur(40px);
-    /* Ensure it stays behind content but above the base background color if needed */
   }
 
   .blob {
     @apply absolute opacity-70 rounded-[40%_50%_30%_40%];
     animation: 
-      transform 18s ease-in-out infinite both alternate,
-      movement_one 12s ease-in-out infinite both;
+      blob-morph 18s ease-in-out infinite both alternate,
+      blob-move-one 12s ease-in-out infinite both;
   }
 
   .blob-one {
@@ -28,40 +27,40 @@
   .blob-two {
     @apply bg-[#0085FF] h-[150px] w-[200px] left-[10px] top-[10px];
     transform: rotate(-180deg);
-    animation: transform 8s ease-in-out infinite both alternate, movement_two 20s ease-in-out infinite both;
+    animation: blob-morph 8s ease-in-out infinite both alternate, blob-move-two 20s ease-in-out infinite both;
   }
 
   .blob-three {
     @apply bg-[#0EAFFF] h-[70px] w-[100px] left-[160px] top-[200px];
     transform: rotate(-180deg);
-    animation: transform 5s ease-in-out infinite both alternate, movement_two 5s ease-in-out infinite both;
+    animation: blob-morph 5s ease-in-out infinite both alternate, blob-move-two 5s ease-in-out infinite both;
   }
 
   .blob-four {
     @apply bg-[#4EAEFF] h-[100px] w-[80px] left-[350px] top-[60px];
     transform: rotate(-180deg);
-    animation: transform 17s ease-in-out infinite both alternate, movement_two 13s ease-in-out infinite both;
+    animation: blob-morph 17s ease-in-out infinite both alternate, blob-move-two 13s ease-in-out infinite both;
   }
 
   .blob-five {
     @apply bg-[#0085FF] h-[100px] w-[80px] left-[480px] top-[30px];
     transform: rotate(-180deg);
-    animation: transform 12s ease-in-out infinite both alternate, movement_two 18s ease-in-out infinite both;
+    animation: blob-morph 12s ease-in-out infinite both alternate, blob-move-two 18s ease-in-out infinite both;
   }
 
   .blob-six {
     @apply bg-[#4EAEFF] h-[150px] w-[150px] left-[600px] top-[150px];
     transform: rotate(-180deg);
-    animation: transform 10s ease-in-out infinite both alternate, movement_two 10s ease-in-out infinite both;
+    animation: blob-morph 10s ease-in-out infinite both alternate, blob-move-two 10s ease-in-out infinite both;
   }
 
   .blob-seven {
     @apply bg-[#0EAFFF] h-[150px] w-[150px] left-[800px] top-[30px];
     transform: rotate(-180deg);
-    animation: transform 7s ease-in-out infinite both alternate, movement_two 23s ease-in-out infinite both;
+    animation: blob-morph 7s ease-in-out infinite both alternate, blob-move-two 23s ease-in-out infinite both;
   }
 
-  @keyframes transform {
+  @keyframes blob-morph {
     0%, 100% { border-radius: 33% 67% 70% 30% / 30% 40% 70% 70%; }
     20% { border-radius: 37% 63% 51% 49% / 37% 35% 35% 63%; }
     40% { border-radius: 36% 64% 64% 36% / 64% 48% 52% 26%; }
@@ -69,13 +68,20 @@
     80% { border-radius: 40% 60% 42% 58% / 51% 51% 49% 59%; }
   }
 
-  @keyframes movement_one {
+  @keyframes blob-move-one {
     0%, 100% { transform: none; }
     50% { transform: translate(50%, 20%) rotateY(10deg) scale(1); }
   }
 
-  @keyframes movement_two {
-    0%, 500% { transform: none; }
+  @keyframes blob-move-two {
+    0%, 100% { transform: none; }
     50% { transform: translate(50%, 20%) rotate(-200deg) scale(1.3); }
+  }
+
+  /* Respect user preference for reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .blob {
+      animation: none;
+    }
   }
 </style>
