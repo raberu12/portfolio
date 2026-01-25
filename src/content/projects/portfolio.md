@@ -4,7 +4,7 @@ summary: 'A one-page parallax portfolio built with Astro and Tailwind CSS. Featu
 tech: ['Astro', 'Tailwind CSS', 'TypeScript']
 featuredImage: '../../assets/images/portfolio-cover.svg'
 github: 'https://github.com/raberu12/portfolio'
-liveUrl: 'https://yourname.dev'
+liveUrl: '/'
 featured: true
 ---
 
