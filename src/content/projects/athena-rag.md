@@ -4,6 +4,7 @@ summary: 'An advanced RAG (Retrieval-Augmented Generation) application powered b
 tech:
   ['Next.js', 'Tailwind CSS', 'OpenRouter API', 'OpenAI Embeddings', 'Gemini']
 featuredImage: '../../assets/images/athena-preview.png'
+github: 'https://github.com/raberu12/athena-rag'
 liveUrl: 'https://athena-rag.vercel.app/'
 featured: true
 ---
