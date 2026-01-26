@@ -6,8 +6,8 @@ const allProjects = await getCollection('projects');
 const sortedProjects = allProjects.sort((a, b) => (a.data.featured === b.data.featured ? 0 : a.data.featured ? -1 : 1));
 ---
 
-<section id="projects" class="fade-in-section py-20 md:py-32 bg-slate-950/80 text-slate-100">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<section id="projects" class="py-20 md:py-32 bg-slate-950/80 text-slate-100">
+  <div class="fade-in-section max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-white">Featured Projects</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {sortedProjects.map((project) => (
