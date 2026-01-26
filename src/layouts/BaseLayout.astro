@@ -10,21 +10,39 @@ interface Props {
   description?: string;
 }
 
-const { title, description = "A minimalist portfolio built with Astro and Tailwind CSS." } = Astro.props;
+const {
+  title,
+  description = 'A minimalist portfolio built with Astro and Tailwind CSS.',
+} = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favico/web/icons8-dev-windows-10-16.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favico/web/icons8-dev-windows-10-32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="/favico/web/icons8-dev-windows-10-96.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favico/web/icons8-dev-windows-10-16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favico/web/icons8-dev-windows-10-32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/favico/web/icons8-dev-windows-10-96.png"
+    />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <title>{title}</title>
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url} />
@@ -39,9 +57,14 @@ const { title, description = "A minimalist portfolio built with Astro and Tailwi
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content="/images/og-image.svg" />
   </head>
-  <body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-teal-500/30 selection:text-teal-200 overflow-x-hidden">
+  <body
+    class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-teal-500/30 selection:text-teal-200 overflow-x-hidden"
+  >
     <!-- Skip to main content link for accessibility -->
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-teal-500 focus:text-slate-900 focus:rounded-lg focus:font-bold">
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-teal-500 focus:text-slate-900 focus:rounded-lg focus:font-bold"
+    >
       Skip to main content
     </a>
     <AnimatedBackground />
@@ -51,7 +74,7 @@ const { title, description = "A minimalist portfolio built with Astro and Tailwi
       <slot />
     </main>
     <Footer />
-    
+
     <script src="../scripts/scroll-observer.ts"></script>
   </body>
 </html>

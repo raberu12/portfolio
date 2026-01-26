@@ -1,7 +1,13 @@
 ---
+
 ---
+
 <!-- h-[20%] = 20% viewport height provides a subtle blur zone at the bottom without obscuring main content -->
-<div id="gradient-blur" class="gradient-blur pointer-events-none fixed inset-x-0 bottom-0 z-40 h-[20%] transition-opacity duration-500 ease-out" aria-hidden="true">
+<div
+  id="gradient-blur"
+  class="gradient-blur pointer-events-none fixed inset-x-0 bottom-0 z-40 h-[20%] transition-opacity duration-500 ease-out"
+  aria-hidden="true"
+>
   <div></div>
   <div></div>
   <div></div>
@@ -15,18 +21,21 @@
   const footer = document.querySelector('footer');
 
   if (gradientBlur && footer) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          gradientBlur.style.opacity = '0';
-        } else {
-          gradientBlur.style.opacity = '1';
-        }
-      });
-    }, {
-      root: null,
-      threshold: 0.1,
-    });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            gradientBlur.style.opacity = '0';
+          } else {
+            gradientBlur.style.opacity = '1';
+          }
+        });
+      },
+      {
+        root: null,
+        threshold: 0.1,
+      },
+    );
 
     observer.observe(footer);
   }
@@ -40,7 +49,7 @@
     inset: 0;
   }
   .gradient-blur::before {
-    content: "";
+    content: '';
     z-index: 1;
     backdrop-filter: blur(0.5px);
     -webkit-mask: linear-gradient(
@@ -165,7 +174,7 @@
     );
   }
   .gradient-blur::after {
-    content: "";
+    content: '';
     z-index: 8;
     backdrop-filter: blur(64px);
     -webkit-mask: linear-gradient(
