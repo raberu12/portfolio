@@ -1,6 +1,6 @@
 ---
 title: 'Personal Portfolio'
-summary: 'A one-page parallax portfolio built with Astro and Tailwind CSS. Features smooth scrolling, responsive design, and accessible components.'
+summary: 'A one-page Astro portfolio with smooth scrolling, responsive sections, and accessible UI.'
 tech: ['Astro', 'Tailwind CSS', 'TypeScript']
 featuredImage: '../../assets/images/portfolio-cover.svg'
 github: 'https://github.com/raberu12/portfolio'

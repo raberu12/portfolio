@@ -1,6 +1,6 @@
 ---
 title: 'Athena RAG'
-summary: 'An advanced RAG (Retrieval-Augmented Generation) application powered by Next.js and Tailwind. It leverages OpenRouter OpenAI for embeddings and the OpenRouter Gemini model for reasoning to deliver intelligent, context-aware responses.'
+summary: 'A RAG app that combines embeddings and reasoning models for context-aware answers.'
 tech:
   ['Next.js', 'Tailwind CSS', 'OpenRouter API', 'OpenAI Embeddings', 'Gemini']
 featuredImage: '../../assets/images/athena-preview.png'
